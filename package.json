@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/edilsonlonC/blockchain-test/issues"
   },
-  "homepage": "https://github.com/edilsonlonC/blockchain-test#readme"
+  "homepage": "https://github.com/edilsonlonC/blockchain-test#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
 }
