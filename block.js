@@ -20,5 +20,9 @@ mineBlock(difficulty){
 }
 
 }
+
 module.exports = Block;
+
+
+
 
