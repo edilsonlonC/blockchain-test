@@ -1,11 +1,11 @@
-require('./block');
-class Blockchain {
+  const Block = require('./block');
+  class Blockchain {
     constructor(){
         this.chain = [this.createGenesis()];
     }
 
     createGenesis(){
-        return new Blockchain(0,"01/01/2017","Genesis block","0")
+        return new Block(0,"01/01/2017","Genesis block","0")
     }
     latestBlock(){
         return this.chain[this.chain.length - 1]
@@ -28,3 +28,4 @@ class Blockchain {
         }
     }
 }
+module.exports = Blockchain;
