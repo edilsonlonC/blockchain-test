@@ -1,22 +1,9 @@
-const SHA256 = require('crypto-js/sha256');
+var Blockchain = require('./blockchain')
+var Block = require('./block');
+var jsChain = new Blockchain();
+jsChain.addBlock(new Block("9/8/2019",{amount: 5}));
+jsChain.addBlock(new Block("9/9/2019",{amount: 10}));
 
-class Block  {
-    constructor(timestamp , data ){
-        this.index = 0;
-        this.timestamp = timestamp;
-        this.data = data;
-        this.previousHash = "0";
-        this.hash = this.calculateHash();
-        this.nonce = 0;
-    }
+console.log(JSON.stringify(jsChain,null,4));
+console.log("is valid? " + jsChain.checkValid() );
 
-
-calculateHash(){
-    return SHA256(this.index +  this.previousHash + this.timestamp + this.data + this.nonce).toString();
-}
-
-mineBlock(difficulty){
- 
-}
-
-}
